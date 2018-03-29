@@ -1,5 +1,5 @@
 $$ html [
 
-  body include "hello-world.vdom"
+  body include "hello-world"
 
 ]

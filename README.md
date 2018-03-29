@@ -1,10 +1,22 @@
-# Project Name
+# Biscotti HTML
 
-- Summary
-- Example
+CoffeeScript VDOM templates.
+
+```coffee
+$$ html [
+  body [ h1 "Hello, World!" ]
+]
+```
+
 
 # Install
 
+`npm i -s biscotti-html`
+
 # Usage
 
-# API
+```coffee
+import processor from "biscotti-html"
+render = do processor
+render  path: "./templates/index.vhtml"
+```

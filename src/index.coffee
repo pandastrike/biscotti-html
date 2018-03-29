@@ -1,10 +1,12 @@
 import {loader, fallback, buffer, include,
-  filters, sandbox, engine} from "biscotti"
+  sandbox, engine} from "biscotti"
 import {HTML} from "panda-vdom"
 
-render = do ->
+import filter from "./filter"
 
-  globals = Object.assign {}, {require}, HTML
+processor = (global = {}) ->
+
+  globals = Object.assign {}, {require}, HTML, globals
 
   engine [
     sandbox: sandbox globals
@@ -18,4 +20,4 @@ render = do ->
     filter
   ]
 
-export {render as default}
+export {processor as default}
